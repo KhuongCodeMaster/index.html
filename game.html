@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1e1e2f, #23232d);
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        thuvienanh {
+            text-align: center;
+            color: #9400D3;
+            font-size: 22px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .highlight {
+            color: #00ccff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .highlight:hover {
+            color: #ff6600;
+            text-shadow: 0px 0px 10px #ff6600;
+        }
+
+        .intro-img {
+            display: block;
+            max-width: 100%;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .thumbnail {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnail:hover img {
+            transform: scale(1.1);
+        }
+
+        .download {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download a {
+            color: #ff6600;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #ff6600;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .download a:hover {
+            background: #ff6600;
+            color: #fff;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .close, .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .close {
+            top: 20px;
+            right: 20px;
+            transform: none;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .close:hover, .prev:hover, .next:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="highlight" style="color: purple; font-size: 24px;">Eliza's Secret Potion</span>
+
+        <img class="intro-img" src="https://raw.githubusercontent.com/KhuongCodeMaster/ESPchuaanh/main/Castle.png" alt="Ảnh Intro Game">
+
+        <div style="text-align: center;">
+            <span style="color: crimson; font-size: 24px;">Mô Tả:</span>
+        </div>
+                <p><span class="highlight">Eliza </span>là một cô phù thủy trẻ trung và quyến rũ, vô tình khám phá một công thức bí ẩn mang tên <span class="highlight">"Secret Potion"</span>.</p>
+<p>Bạn sẽ vào vai một nhân vật nam bị cuốn vào thế giới <span class="highlight">ma thuật</span> đầy rẫy những cạm bẫy và ham muốn. Hành trình này không chỉ xoay quanh việc giải mã công thức <span class="highlight">potion</span>, mà còn đưa bạn vào những mối quan hệ nóng bỏng, đầy cám dỗ và đôi khi nguy hiểm.</p>
+<p>Mỗi quyết định của bạn sẽ dẫn đến những kết quả bất ngờ: từ khám phá sự thật đen tối về <span class="highlight">Eliza</span> cho đến những khoảnh khắc <span class="highlight">"không thể diễn tả bằng lời"</span>.</p>
+<p>Liệu bạn sẽ giữ được lý trí, hay bị lôi cuốn vào vòng xoáy của <span class="highlight">quyền lực</span> và <span class="highlight">dục vọng</span>? 🌚🔥</p>
+     <p><strong>Thể loại:</strong> Fantasy, RPG, Adventure, Puzzle, <span class="highlight">Romance</span>, Erotica, Choice-based, Dark Mystery, Visual Novel 18+</p>
+        <p><strong>Ngôn Ngữ:</strong> <span class="highlight">English</span></p>
+       <p><strong>Hỗ Trợ Máy:</strong> <span class="highlight">Android, iOS, Windows, MacOS</span></p>
+
+        <thuvienanh>🔞 Kho Hình Ảnh 18+</thuvienanh>
+        <div class="gallery">
+             <div class="thumbnail"><img src="https://raw.githubusercontent.com/KhuongCodeMaster/ESPchuaanh/refs/heads/main/RJ01233190_img_smp1.jpg" alt="Ảnh 1"></div>
+            <div class="thumbnail"><img src="https://raw.githubusercontent.com/KhuongCodeMaster/ESPchuaanh/refs/heads/main/RJ01233190_img_smp2.jpg" alt="Ảnh 2"></div>
+            <div class="thumbnail"><img src="https://raw.githubusercontent.com/KhuongCodeMaster/ESPchuaanh/refs/heads/main/RJ01233190_img_smp3.jpg" alt="Ảnh 3"></div>
+            <div class="thumbnail"><img src="https://raw.githubusercontent.com/KhuongCodeMaster/ESPchuaanh/refs/heads/main/RJ01233190_img_smp4.jpg" alt="Ảnh 4"></div>
+            <div class="thumbnail"><img src="https://raw.githubusercontent.com/KhuongCodeMaster/ESPchuaanh/refs/heads/main/RJ01233190_img_smp5.jpg" alt="Ảnh 5"></div>
+            <div class="thumbnail"><img src="https://raw.githubusercontent.com/KhuongCodeMaster/ESPchuaanh/refs/heads/main/RJ01233190_img_smp6.jpg" alt="Ảnh 6"></div>
+        </div>
+
+        <div class="download">
+            <a href="https://pixeldrain.com/u/DrSDQVH2" target="_blank">Tải Game Ngay</a>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">&#10006;</span>
+        <span class="prev" onclick="prevImage()">&#10094;</span>
+        <img id="lightbox-img" src="" alt="Lightbox">
+        <span class="next" onclick="nextImage()">&#10095;</span>
+    </div>
+
+    <script>
+        const thumbnails = document.querySelectorAll('.thumbnail img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        let currentIndex = 0;
+
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                currentIndex = index;
+                openLightbox(thumbnail.src);
+            });
+        });
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+            lightboxImg.src = thumbnails[currentIndex].src;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % thumbnails.length;
+            lightboxImg.src = thumbnails[currentIndex].src;
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>

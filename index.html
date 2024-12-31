@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .navbar {
+            background: #007BFF;
+            color: white;
+            padding: 5px 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .hamburger {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            background: white;
+            height: 3px;
+            width: 25px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background: #333;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 100;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown a:hover {
+            background: #444;
+        }
+
+        .dropdown.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .game-item {
+            margin-bottom: 10px;
+        }
+
+        .game-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            border: 0px solid transparent;
+            padding: 0px;
+            border-radius: 3px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            background-color: #1a1a1a;
+        }
+
+        .game-link img {
+            width: 100%;
+            max-width: 100%; /* Đảm bảo ảnh có chiều rộng đầy đủ của phần tử chứa */
+            border-radius: 3px;
+            transition: transform 0.3s ease;
+        }
+
+        .game-link:hover, .game-link:focus {
+            border-color: #007BFF;
+            transform: scale(1.02);
+        }
+
+        .game-link:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Menu2 */
+        .menu2 {
+            margin-top: 20px;
+        }
+
+        .game-item.menu2-item {
+            margin-bottom: 10px;
+        }
+
+        .game-link.menu2-link {
+            background-color: #28a745;
+        }
+
+        .game-link.menu2-link:hover {
+            background-color: #218838;
+        }
+
+        /* Chữ đè lên ảnh */
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%; /* Đảm bảo ảnh có chiều rộng đầy đủ của phần tử chứa */
+            margin-bottom: 15px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .image-container .text-overlay {
+            position: absolute;
+            top: 5%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            white-space: nowrap;  /* Ngăn chữ xuống dòng */
+            line-height: 1.2;     /* Điều chỉnh khoảng cách giữa các dòng */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <div class="navbar">
+        <span>Danh Sách Game</span>
+
+        <!-- Nút ba gạch -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Menu Dropdown -->
+        <div class="dropdown" id="menuDropdown">
+            <a href="register.html">Đăng Ký</a>
+            <a href="login.html">Đăng Nhập</a>
+            <a href="#" onclick="logout()">Đăng Xuất</a>
+        </div>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="content">
+        <h1>Danh Sách Game</h1>
+
+        <!-- Game 1 -->
+        <div class="game-item">
+            <a href="game.html?id=1" class="game-link">
+
+                <!-- Container với ảnh và chữ đè lên -->
+                <div class="image-container">
+                    <img src="https://raw.githubusercontent.com/KhuongCodeMaster/ESPchuaanh/main/Castle.png" alt="Eliza's Secret Potion Intro Lỗi">
+                    <div class="text-overlay">Eliza's Secret Potion</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Menu2: Game mới -->
+        <div class="menu2">
+            <div class="game-item menu2-item">
+                <a href="game.html?id=2" class="game-link menu2-link">
+                    <h2>Game 2: The Mystical Adventure</h2>
+                    <p>Một game phiêu lưu với các câu đố thú vị.</p>
+
+                    <!-- Container với ảnh và chữ đè lên -->
+                    <div class="image-container">
+                        <img src="https://example.com/mystical_adventure.png" alt="Mystical Adventure Intro">
+                        <div class="text-overlay">The Mystical Adventure</div>
+                    </div>
+                </a>
+            </div>
+            <div class="game-item menu2-item">
+                <a href="game.html?id=3" class="game-link menu2-link">
+                    <h2>Game 3: Dragon Quest</h2>
+                    <p>Chơi vai trò của một chiến binh dũng mãnh.</p>
+
+                    <!-- Container với ảnh và chữ đè lên -->
+                    <div class="image-container">
+                        <img src="https://example.com/dragon_quest.png" alt="Dragon Quest Intro">
+                        <div class="text-overlay">Dragon Quest</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Hiển thị hoặc ẩn menu với hiệu ứng chuyển động mượt mà
+        function toggleMenu() {
+            const menu = document.getElementById('menuDropdown');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+                // Đảm bảo menu ẩn mượt mà
+                setTimeout(function() {
+                    menu.style.display = 'none'; // Ẩn menu sau khi chuyển động kết thúc
+                }, 300);
+            } else {
+                menu.style.display = 'block'; // Hiển thị menu
+                setTimeout(function() {
+                    menu.classList.add('show');
+                }, 10); // Thêm lớp show sau khi hiển thị
+            }
+        }
+
+        // Đăng xuất
+        function logout() {
+            localStorage.removeItem("isLoggedIn");
+            alert("Bạn đã đăng xuất thành công!");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
